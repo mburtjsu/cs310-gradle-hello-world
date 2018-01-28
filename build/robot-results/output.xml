@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0 (Jython 2.7.0 on java9.0.4)" generated="20180128 14:23:30.702">
+<suite source="/Users/K_Burt_60/Documents/software_engineering/cs310-gradle-hello-world/src/test/acceptancetest" name="Acceptancetest" id="s1">
+<suite source="/Users/K_Burt_60/Documents/software_engineering/cs310-gradle-hello-world/src/test/acceptancetest/HelloWorldTests.robot" name="HelloWorldTests" id="s1-s1">
+<test name="Say Hello" id="s1-s1-t1">
+<kw library="keywords.CustomKeywords" name="Greet Everyone">
+<status endtime="20180128 14:23:31.187" starttime="20180128 14:23:31.183" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20180128 14:23:31.190" starttime="20180128 14:23:31.176" status="PASS"></status>
+</test>
+<test name="Say Hello In Pig Latin" id="s1-s1-t2">
+<kw library="keywords.CustomKeywords" name="Reverse Greet Everyone">
+<status endtime="20180128 14:23:31.202" starttime="20180128 14:23:31.199" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20180128 14:23:31.204" starttime="20180128 14:23:31.195" status="PASS"></status>
+</test>
+<test name="Make Sure You're Saying Hello" id="s1-s1-t3">
+<kw library="keywords.CustomKeywords" name="Greet Everyone">
+<assign>
+<var>${result}</var>
+</assign>
+<msg level="INFO" timestamp="20180128 14:23:31.223">${result} = hello world</msg>
+<status endtime="20180128 14:23:31.225" starttime="20180128 14:23:31.217" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>hello world</arg>
+</arguments>
+<status endtime="20180128 14:23:31.234" starttime="20180128 14:23:31.227" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20180128 14:23:31.236" starttime="20180128 14:23:31.209" status="PASS"></status>
+</test>
+<test name="Make A Test That Fails" id="s1-s1-t4">
+<kw library="keywords.CustomKeywords" name="Reverse Greet Everyone">
+<assign>
+<var>${result}</var>
+</assign>
+<msg level="INFO" timestamp="20180128 14:23:31.254">${result} = dlrow olleh</msg>
+<status endtime="20180128 14:23:31.255" starttime="20180128 14:23:31.249" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>dlrow olleh</arg>
+</arguments>
+<status endtime="20180128 14:23:31.261" starttime="20180128 14:23:31.256" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20180128 14:23:31.263" starttime="20180128 14:23:31.241" status="PASS"></status>
+</test>
+<status endtime="20180128 14:23:31.268" starttime="20180128 14:23:31.111" status="PASS"></status>
+</suite>
+<status endtime="20180128 14:23:31.278" starttime="20180128 14:23:30.760" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" name="Acceptancetest" id="s1">Acceptancetest</stat>
+<stat pass="4" fail="0" name="HelloWorldTests" id="s1-s1">Acceptancetest.HelloWorldTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
